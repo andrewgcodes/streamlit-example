@@ -27,11 +27,12 @@ body {
 buffer = st.checkbox('Dark Mode')
 if buffer:
     st.markdown(darkmode,unsafe_allow_html=True)
-symbol = st.text_input("First Stock Symbol", "GME")
+st.write("First stock symbol")
+symbol = st.text_input("", "GME")
 myTicker = yf.Ticker(symbol)
 data = myTicker.history(period='1d',start='2020-1-1',end = '2021-2-25')
-
-symbol2 = st.text_input("Second Stock Symbol", "TSLA")
+st.write("Second stock symbol")
+symbol2 = st.text_input("", "TSLA")
 myTicker2 = yf.Ticker(symbol2)
 data2 = myTicker2.history(period='1d',start='2020-1-1',end = '2021-2-25')
 
