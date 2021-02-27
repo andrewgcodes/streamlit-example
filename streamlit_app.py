@@ -16,12 +16,11 @@ yf.pdr_override()
 current = datetime.date.today();
 
 st.header("Random Stock Generator")
-myStock="GME"
-stock = yf.Ticker(myStock)
+stock = yf.Ticker("GME")
 myTicker = yf.Ticker(stock)
 data = myTicker.history(period='1d',start='2020-1-1',end = '2021-2-25')
 st.dataframe(data)
-st.write("Closing Price for: " + myStock)
+st.write("Closing Price for: GME")
 st.line_chart(data.Close)
-st.write("Volume for: " + myStock)
+st.write("Volume for: GME")
 st.line_chart(data.Volume)
