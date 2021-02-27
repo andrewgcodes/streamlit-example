@@ -11,16 +11,20 @@ import requests
 yf.pdr_override()
 
 """
-# GME Stocks Viewer
+# Stock Viewer
 """
 current = datetime.date.today();
 
-st.header("Random Stock Generator")
-symbol = "GME"
+st.header("Stock Viewer")
+symbol = st.text_input("Stock Symbol", "GME")
 myTicker = yf.Ticker(symbol)
 data = myTicker.history(period='1d',start='2020-1-1',end = '2021-2-25')
 st.dataframe(data)
-st.write("Closing Price for: GME")
+st.write("Closing Price")
 st.line_chart(data.Close)
-st.write("Volume for: GME")
+st.write("High Price")
+st.line_chart(data.High)
+st.write("Low Price")
+st.line_chart(data.Low)
+st.write("Volume")
 st.line_chart(data.Volume)
