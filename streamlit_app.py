@@ -11,7 +11,7 @@ import requests
 yf.pdr_override()
 
 """
-# Random Stock
+# GME Stocks Viewer
 """
 current = datetime.date.today();
 
