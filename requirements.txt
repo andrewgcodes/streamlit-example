@@ -6,3 +6,4 @@ datetime
 ta
 pandas
 requests
+matplotlib
