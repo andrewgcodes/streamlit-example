@@ -16,9 +16,15 @@ yf.pdr_override()
 current = datetime.date.today();
 
 st.header("Stock Viewer")
-symbol = st.text_input("Stock Symbol", "GME")
+symbol = st.text_input("Second Stock Symbol", "GME")
 myTicker = yf.Ticker(symbol)
 data = myTicker.history(period='1d',start='2020-1-1',end = '2021-2-25')
+data['Stock'] = symbol
+symbol2 = st.text_input("Second Stock Symbol", "TSLA")
+myTicker2 = yf.Ticker(symbol2)
+data2 = myTicker2.history(period='1d',start='2020-1-1',end = '2021-2-25')
+data2['Stock'] = symbol2
+data.join(data2)
 st.dataframe(data)
 st.write("Closing Price")
 st.line_chart(data.Close)
