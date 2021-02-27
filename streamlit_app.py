@@ -17,6 +17,18 @@ yf.pdr_override()
 current = datetime.date.today();
 
 st.header("Stock Viewer")
+darkmode = """
+<style>
+body {
+  background-color: black;
+  color: white;
+}
+</style>
+"""
+buffer = st.sidebar.checkbox('Dark Mode')
+if buffer:
+    st.markdown(darkmode,unsafe_allow_html=True)
+st.header("Theme will change")
 symbol = st.text_input("First Stock Symbol", "GME")
 myTicker = yf.Ticker(symbol)
 data = myTicker.history(period='1d',start='2020-1-1',end = '2021-2-25')
