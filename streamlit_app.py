@@ -16,7 +16,7 @@ yf.pdr_override()
 current = datetime.date.today();
 
 st.header("Random Stock Generator")
-symbol = "GOOGL"
+symbol = "GME"
 myTicker = yf.Ticker(symbol)
 data = myTicker.history(period='1d',start='2020-1-1',end = '2021-2-25')
 st.dataframe(data)
