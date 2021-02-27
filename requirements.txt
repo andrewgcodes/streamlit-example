@@ -5,5 +5,5 @@ yfinance
 datetime
 talib 
 ta
-pandas as pd
+pandas
 requests
