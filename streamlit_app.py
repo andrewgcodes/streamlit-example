@@ -32,5 +32,5 @@ headers = [symbol, symbol2]
 
 df3 = pd.concat(data3, axis=1, keys=headers)
 st.write("Closing Price")
-st.line_chart(df3.Close)
+st.line_chart(df3)
 
