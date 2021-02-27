@@ -17,7 +17,7 @@ yf.pdr_override()
 current = datetime.date.today();
 
 st.header("Stock Viewer")
-symbol = st.text_input("Second Stock Symbol", "GME")
+symbol = st.text_input("First Stock Symbol", "GME")
 myTicker = yf.Ticker(symbol)
 data = myTicker.history(period='1d',start='2020-1-1',end = '2021-2-25')
 
