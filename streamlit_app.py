@@ -30,3 +30,6 @@ st.write("Total Pushups Completed: " + str(totalpushups))
 totalpushups= df2['How many miles did you run?'].sum()
 st.write("Miles goal: 300")
 st.write("Total Miles Completed: " + str(totalpushups))
+
+df3 = df2.drop(df2.columns[[1]],axis=1)
+st.linechart(df3)
