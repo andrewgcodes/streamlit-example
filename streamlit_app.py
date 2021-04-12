@@ -32,4 +32,4 @@ st.write("Miles goal: 300")
 st.write("Total Miles Completed: " + str(totalpushups))
 
 df3 = df2.drop(df2.columns[[1]],axis=1)
-st.linechart(df3)
+st.line_chart(df3)
