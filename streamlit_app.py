@@ -34,7 +34,7 @@ body {
 
 
 df = load_data(type_='groupfitdata')
-st.title("{} GroupFit Dashboard".format(page))
+st.title("GroupFit Dashboard")
 	
 
 st.write(df)
