@@ -34,5 +34,6 @@ df3 = df2.copy()
 df3['What day are you logging for?'] = df3['What day are you logging for?'].replace(['4/11/2021'],'3')
 df3['What day are you logging for?'] = df3['What day are you logging for?'].replace(['4/10/2021'],'2')
 df3['What day are you logging for?'] = df3['What day are you logging for?'].replace(['4/9/2021'],'1')
-df3= df3.set_index('What day are you logging for?')
-st.line_chart(df3)
+#df3= df3.set_index('What day are you logging for?')
+#plt.plot('What day are you logging for?'
+#st.line_chart(df3)
