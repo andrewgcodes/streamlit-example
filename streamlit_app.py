@@ -17,7 +17,6 @@ def load_data(type_):
 	df = pd.read_csv('fitnessdata.csv')
 
 	return df
-"""
 
 
 df = load_data(type_='groupfitdata')
