@@ -36,7 +36,7 @@ body {
 df = load_data(type_='groupfitdata')
 st.title("GroupFit Dashboard")
 	
-
-st.write(df)
+df2 = df.drop(df.columns[0,4,5], axis=1)
+st.write(df2)
 	
 
