@@ -24,24 +24,17 @@ body {
 }
 </style>
 """
-buffer = st.checkbox('Dark Mode')
-if buffer:
-    st.markdown(darkmode,unsafe_allow_html=True)
-st.write("First stock symbol")
-symbol = st.text_input("", "GME")
-myTicker = yf.Ticker(symbol)
-data = myTicker.history(period='1d',start='2020-1-1',end = '2021-2-25')
-st.write("Second stock symbol")
-symbol2 = st.text_input("", "TSLA")
-myTicker2 = yf.Ticker(symbol2)
-data2 = myTicker2.history(period='1d',start='2020-1-1',end = '2021-2-25')
 
 
-data3 = [data["Close"], data2["Close"]]
+def main():
 
-headers = [symbol, symbol2]
 
-df3 = pd.concat(data3, axis=1, keys=headers)
-st.write("Closing Price")
-st.line_chart(df3)
+	df = load_data(type_='groupfitdata')
+
+	st.title("{} GroupFit Dashboard".format(page))
+	
+
+	st.markdown("> Chart in this page shows the comparison of number of respondents who is tested and not tested")
+	st.write("#Respondents: {}".format(len(df)))
+	
 
