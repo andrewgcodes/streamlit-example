@@ -38,5 +38,5 @@ st.title("GroupFit Dashboard")
 	
 df2 = df.drop(df.columns[[0,4,5]], axis=1)
 st.write(df2)
-	
-
+totalpushups= df2[[1]].sum(I)
+st.write("Total Pushups Completed: " + totalpushups)
