@@ -7,3 +7,6 @@ ta
 pandas
 requests
 matplotlib
+gspread
+oauth2client
+time
