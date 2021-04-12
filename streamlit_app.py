@@ -18,18 +18,6 @@ def load_data(type_):
 
 	return df
 """
-# Stock Viewer
-"""
-current = datetime.date.today();
-
-darkmode = """
-<style>
-body {
-  background-color: black;
-  color: white;
-}
-</style>
-"""
 
 
 df = load_data(type_='groupfitdata')
