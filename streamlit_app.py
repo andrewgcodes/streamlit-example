@@ -35,6 +35,6 @@ def main():
 	
 
 	st.markdown("> Chart in this page shows the comparison of number of respondents who is tested and not tested")
-	st.write("#Respondents: {}".format(len(df)))
+	st.write(df)
 	
 
