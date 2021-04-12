@@ -35,6 +35,4 @@ def main(spreadsheets):
 		time.sleep(5)
 	df.to_csv('fitnessdata.csv',index=False)
 
-if __name__ == '__main__':
-	print('Scraping Form Data')
-	main(spreadsheets)	
+main(spreadsheets)	
