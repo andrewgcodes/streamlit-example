@@ -26,15 +26,11 @@ body {
 """
 
 
-def main():
 
-
-	df = load_data(type_='groupfitdata')
-
-	st.title("{} GroupFit Dashboard".format(page))
+df = load_data(type_='groupfitdata')
+st.title("{} GroupFit Dashboard".format(page))
 	
 
-	st.markdown("> Chart in this page shows the comparison of number of respondents who is tested and not tested")
-	st.write(df)
+st.write(df)
 	
 
