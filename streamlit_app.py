@@ -11,6 +11,12 @@ import requests
 import matplotlib
 yf.pdr_override()
 
+
+			
+def load_data(type_):
+	df = pd.read_csv('survey_data.csv')
+
+	return df
 """
 # Stock Viewer
 """
