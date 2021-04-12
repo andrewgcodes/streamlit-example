@@ -32,7 +32,6 @@ body {
 """
 
 
-
 df = load_data(type_='groupfitdata')
 st.title("GroupFit Dashboard")
 	
@@ -41,3 +40,7 @@ st.write(df2)
 totalpushups= df2['How many pushups did you do?'].sum()
 st.write("Pushups goal: 300")
 st.write("Total Pushups Completed: " + str(totalpushups))
+totalpushups= df2['How many miles did you run?
+'].sum()
+st.write("Miles goal: 300")
+st.write("Total Miles Completed: " + str(totalpushups))
