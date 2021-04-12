@@ -14,7 +14,7 @@ yf.pdr_override()
 
 			
 def load_data(type_):
-	df = pd.read_csv('survey_data.csv')
+	df = pd.read_csv('fitnessdata.csv')
 
 	return df
 """
