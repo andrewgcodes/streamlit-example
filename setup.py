@@ -4,7 +4,7 @@ import pandas
 import time
 import streamlit
 import altair
-
+from oauth2client.service_account import ServiceAccountCredentials
 
 scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
 creds = ServiceAccountCredentials.from_json_keyfile_name('groupfit-008ebd4002c3.json', scope) #Change to your downloaded JSON file name
@@ -28,4 +28,13 @@ def main(spreadsheets):
 		df_temp = pd.DataFrame(columns = [i for i in range(len(data[0]))])
 		for i in range(1,len(data)):
 			df_temp.loc[len(df_temp)] = data[i]
-        _type = 'groupfitdata'
+                _type = 'groupfitdata'
+                df = pd.concat([df,df_temp])	
+
+		#API Limit Handling
+		time.sleep(5)
+	df.to_csv('fitnessdata.csv',index=False)
+
+if __name__ == '__main__':
+	print('Scraping Form Data')
+	main(spreadsheets)	
