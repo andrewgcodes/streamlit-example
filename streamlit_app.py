@@ -38,4 +38,9 @@ df3['What day are you logging for?'] = df3['What day are you logging for?'].repl
 #plt.plot('What day are you logging for?'
 #st.line_chart(df3)
 user_input = st.multiselect('Search stats by username',df.iloc[:, 0])
+miletotal = 0
+
+df4 = df.loc[df.iloc[:,0] == user_input]
+miletotal = df4['How many miles did you run?'].sum()
+st.write(user_input + " has run " + str(miletotal) + " miles!")
 
