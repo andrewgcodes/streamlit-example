@@ -25,10 +25,10 @@ st.title("GroupFit Dashboard")
 df2 = df.drop(df.columns[[4,5]], axis=1)
 st.write(df2)
 totalpushups= df2['How many pushups did you do?'].sum()
-st.write("Pushups goal: 300")
+st.write("Group Pushup goal: 300")
 st.write("Total Pushups Completed: " + str(totalpushups))
 totalpushups= df2['How many miles did you run?'].sum()
-st.write("Miles goal: 300")
+st.write("Group Mile goal: 50")
 st.write("Total Miles Completed: " + str(totalpushups))
 df3 = df2.copy()
 df3['What day are you logging for?'] = df3['What day are you logging for?'].replace(['4/11/2021'],'3')
@@ -43,5 +43,8 @@ mask = df2['What\'s your username?'].values == user_input
 
 df4 = df2[mask]
 miletotal = df4['How many miles did you run?'].sum()
+pushuptotal = df4['How many pushups did you do?'].sum()
+st.write(str(user_input) + " has done " + str(miletotal) + " pushups!")
+
 st.write(str(user_input) + " has run " + str(miletotal) + " miles!")
 
