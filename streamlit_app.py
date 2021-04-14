@@ -37,5 +37,5 @@ df3['What day are you logging for?'] = df3['What day are you logging for?'].repl
 #df3= df3.set_index('What day are you logging for?')
 #plt.plot('What day are you logging for?'
 #st.line_chart(df3)
-user_input = st.text_input("Search stats by username", "andrew")
+user_input = st.multiselect('Search stats by username',df.columns)
 
