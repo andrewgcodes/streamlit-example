@@ -44,7 +44,7 @@ mask = df2['What\'s your username?'].values == user_input
 df4 = df2[mask]
 miletotal = df4['How many miles did you run?'].sum()
 pushuptotal = df4['How many pushups did you do?'].sum()
-st.write(str(user_input) + " has done " + str(miletotal) + " pushups!")
+st.write(str(user_input) + " has done " + str(pushuptotal) + " pushups!")
 
 st.write(str(user_input) + " has run " + str(miletotal) + " miles!")
 
