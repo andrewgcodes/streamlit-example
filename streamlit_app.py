@@ -20,7 +20,7 @@ def load_data(type_):
 
 
 df = load_data(type_='groupfitdata')
-st.title("GroupFit Dashboard")
+st.title("FTC Team 14235 GroupFit Dashboard")
 	
 df2 = df.drop(df.columns[[4,5]], axis=1)
 st.write(df2)
