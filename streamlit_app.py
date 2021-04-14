@@ -21,7 +21,7 @@ def load_data(type_):
 
 df = load_data(type_='groupfitdata')
 st.title("FTC Team 14235 GroupFit Dashboard")
-	
+st.image("shine.png")
 df2 = df.drop(df.columns[[4,5]], axis=1)
 st.write(df2)
 totalpushups= df2['How many pushups did you do?'].sum()
