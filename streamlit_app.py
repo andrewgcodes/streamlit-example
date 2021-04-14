@@ -37,14 +37,16 @@ df3['What day are you logging for?'] = df3['What day are you logging for?'].repl
 #df3= df3.set_index('What day are you logging for?')
 #plt.plot('What day are you logging for?'
 #st.line_chart(df3)
-user_input = st.multiselect('Search stats by username',df.iloc[:, 0])
-miletotal = 0
-mask = df2['What\'s your username?'].values == user_input
+try:
+	user_input = st.multiselect('Search stats by username',df.iloc[:, 0])
+	miletotal = 0
+	mask = df2['What\'s your username?'].values == user_input
 
-df4 = df2[mask]
-miletotal = df4['How many miles did you run?'].sum()
-pushuptotal = df4['How many pushups did you do?'].sum()
-st.write(str(user_input) + " has done " + str(pushuptotal) + " pushups!")
+	df4 = df2[mask]
+	miletotal = df4['How many miles did you run?'].sum()
+	pushuptotal = df4['How many pushups did you do?'].sum()
+	st.write(str(user_input) + " has done " + str(pushuptotal) + " pushups!")
 
-st.write(str(user_input) + " has run " + str(miletotal) + " miles!")
-
+	st.write(str(user_input) + " has run " + str(miletotal) + " miles!")
+except:
+	pass
