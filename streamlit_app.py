@@ -2,14 +2,12 @@ from collections import namedtuple
 import altair as alt
 import math
 import pandas as pd
-import yfinance as yf
 import streamlit as st
 import datetime 
 import ta
 import pandas as pd
 import requests
 import matplotlib
-yf.pdr_override()
 
 
 			
